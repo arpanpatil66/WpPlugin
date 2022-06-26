@@ -18,7 +18,7 @@ function Wp_Images_activhock(){
 	$table_name=$table_prefix.'wpimages';
 
     //create database for images
-	$q="CREATE TABLE `bitnami_wordpress`.`$table_name` ( `id` INT(3) NOT NULL AUTO_INCREMENT , `imagename` VARCHAR(111) NOT NULL , `imgpath` VARCHAR(111) NOT NULL , `shortcode` VARCHAR(111) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+	$q="CREATE TABLE `$table_name` ( `id` INT(3) NOT NULL AUTO_INCREMENT , `imagename` VARCHAR(111) NOT NULL , `imgpath` VARCHAR(111) NOT NULL , `shortcode` VARCHAR(111) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 	$wpdb->query($q);
 }
 register_activation_hook(__FILE__,'Wp_Images_activhock');
